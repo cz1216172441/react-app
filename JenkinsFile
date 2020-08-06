@@ -7,15 +7,15 @@ pipeline {
     }
 
     stages {
-        stage('Build') { 
+        stage('Install') { 
             steps {
                 bat 'npm install'
             }
         }
 
-        stage('Deploy') { 
+        stage('Build') { 
             steps {
-                bat 'npm start &'
+                bat 'npm build'
             }
         }
     }
