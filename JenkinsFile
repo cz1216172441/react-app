@@ -15,7 +15,13 @@ pipeline {
 
         stage('Build') { 
             steps {
-                bat 'npm build'
+                bat 'npm run-script build'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                bat 'copy /build/* D:/dev/jenkins/repositories/react-app/build'
             }
         }
     }
