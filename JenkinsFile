@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat 'xcopy "build" "D:/dev/jenkins/repositories/react-app"'
+                bat 'xcopy "build" "D:/dev/jenkins/repositories/react-app/build"'
             }
         }
     }
